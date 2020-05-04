@@ -1,0 +1,22 @@
+package credentialing.rules;
+
+import com.optum.propel.rulesengine.credentialing.models.DetermineCredentialingRequest
+import com.optum.propel.rulesengine.credentialing.models.DetermineCredentialingResponse;
+
+rule "credentialing IBS or DBS"
+when
+    $request: DetermineCredentialingRequest(  credType in ("IBS","DBS"))
+then
+    insert($request.getResponse());
+//    modify($response){
+//        setCredentialingRequired("May be required"),
+//        setSalesForceRecordType("Cred Not Initiated"),
+//        setCredentialingEntityUrl("https://www.myoptumhealthphysicalhealth.com/"),
+//        setCredEntityPhoneNumber("800-873-4575"),
+//        setMessage("Credentialing may be required. Please contact Optum Health."),
+//        setCredentialingEntity("Optum Physical Health")
+//    }
+//    $request.setResponse($response);
+//    update($request);
+    System.out.println("Executed the credentialing IBS or DBS rules successfully");
+end

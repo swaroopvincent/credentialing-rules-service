@@ -1,0 +1,10 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <kbase name="credentialing.rules" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+        <ksession name="credentialing.rules.session" type="stateful" >
+<!--            default="true" clockType="realtime">-->
+<!--            <listeners>-->
+<!--                <ruleRuntimeEventListener type="org.drools.core.event.DebugRuleRuntimeEventListener"/>-->
+<!--            </listeners>-->
+        </ksession>
+    </kbase>
+</kmodule>
